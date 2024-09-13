@@ -42,8 +42,15 @@ public class ExercisesProjectApplication implements CommandLineRunner {
 
 		System.out.println("Enter the number you want: ");
 		int number = input.nextInt();
+		input.nextLine();
 		NumberChecker numberChecker = new NumberChecker();
 		numberChecker.checkNumber(number);
+
+		System.out.println("Pick a color between RED, GREEN or YELLOW: ");
+		String color = input.nextLine().toUpperCase();
+		TrafficLights trafficLights = new TrafficLights();
+		trafficLights.displayColor(color);
+
 		input.close();
 	}
 
