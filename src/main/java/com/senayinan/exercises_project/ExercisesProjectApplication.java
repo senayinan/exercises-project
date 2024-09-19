@@ -41,6 +41,18 @@ public class ExercisesProjectApplication implements CommandLineRunner {
 		System.out.println("Your grade is: " + gr);
 
 
+		ForEachLoop forEachLoop = new ForEachLoop();
+		System.out.println("How many numbers do you want to enter?");
+		int numb = input.nextInt();
+		int numbers [] = new int[numb];
+
+		for(int i = 0; i<numb ;i++)   {
+			System.out.println("Enter the number" + (i +1) + ": ");
+			numbers[i] = input.nextInt();
+		}
+		forEachLoop.loopForEach(numbers);
+
+
 		VowelOrConsonant vowelOrConsonant = new VowelOrConsonant();
 		System.out.println("Enter the character to check: ");
 		char ch= input.next().charAt(0);
